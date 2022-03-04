@@ -47,6 +47,10 @@
                 }
             }
         }
+        const scrollToId = (id) => {
+            let myElement = document.getElementById(id);
+            document.getElementById('scrollContainer').scrollTop = myElement.offsetTop;
+        }
     </script>
 </head>
 <body class="bg-ADBlue overflow-hidden flex flex-col justify-center items-center">
@@ -452,13 +456,5 @@
         <button onclick="scrollToId('cFAQ');">FAQ</button>
         <button onclick="scrollToId('cFeedback');">Feedback</button>
     </nav>
-    <script>
-        const scrollToId = (id) => {
-            let myElement = document.getElementById(id);
-            document.getElementById('scrollContainer').scrollTop = myElement.offsetTop;
-
-            // document.querySelector(id).scrollIntoView({behavior: 'smooth'});
-        }
-    </script>
 </body>
 </html>
